@@ -1,0 +1,16 @@
+.section {
+    &:not(:last-child) {
+        margin-bottom: rem-calc(64);
+    }
+}
+
+.section_prev {
+    height: rem-calc(1237);
+    background-image: url(../img/layout/section_prev.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.section__header {
+    margin-bottom: $bit * 4;
+}

@@ -1,0 +1,19 @@
+.form__title {
+    display: block;
+    margin-bottom: rem-calc(16);
+    color: color(black);
+    line-height: 1;
+    font-weight: font-weight(bold);
+}
+
+.form__group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: rem-calc(0 -12 16);
+
+    > * {
+        flex-basis: 30%;
+        flex-grow: 2;
+        padding: rem-calc(0 12);
+    }
+}

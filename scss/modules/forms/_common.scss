@@ -1,0 +1,10 @@
+$input-field-color: color(medium-gray);
+$input-field-color-focus: color(primary);
+$input-field-color-success: color(success);
+$input-field-color-error: color(secondary);
+$input-field-darken: 20%;
+
+@import "form";
+@import "inputs";
+@import "select";
+@import "radios";

@@ -1,0 +1,117 @@
+.input {
+    position: relative;
+    display: block;
+    margin-bottom: $bit * 3.5;
+
+    .form__group & {
+        margin-bottom: 0;
+    }
+}
+.input__text {
+    display: block;
+    margin-bottom: rem-calc(16);
+    color: color(black);
+    line-height: 1;
+    font-weight: font-weight(bold);
+    transition: color 250ms;
+    cursor: text;
+
+    .input__field:focus + & {
+        color: $input-field-color-focus;
+    }
+    .input__field_status_valid + &,
+    .input__field_status_valid:focus + & {
+        color: $input-field-color-success;
+    }
+    .input__field_status_invalid + &,
+    .input__field_status_invalid:focus + & {
+        color: $input-field-color-error;
+    }
+}
+.input__field {
+    order: 2;
+    width: 100%;
+    padding: rem-calc(12 16 13);
+    border: 1px solid $input-field-color;
+    font-size: font-size(medium);
+    font-weight: font-weight(bold);
+    line-height: 1;
+    transition: border-color 250ms;
+
+    &::placeholder {
+        color: color(dark-gray);
+    }
+
+    &:invalid {
+        outline: none;
+        box-shadow: none;
+    }
+    &:hover {
+        border-color: darken($input-field-color, $input-field-darken);
+    }
+    &:focus {
+        border-color: $input-field-color-focus;
+    }
+}
+.input__field_status_valid {
+    border-color: $input-field-color-success;
+
+    &:focus {
+        border-color: $input-field-color-success;
+    }
+    &:hover {
+        border-color: darken($input-field-color-success, $input-field-darken);
+    }
+}
+.input__field_status_invalid {
+    border-color: $input-field-color-error;
+
+    &:focus {
+        border-color: $input-field-color-error;
+    }
+    &:hover {
+        border-color: darken($input-field-color-error, $input-field-darken);
+    }
+}
+.input__group {
+    display: flex;
+}
+.input__prefix {
+    order: 1;
+    flex-grow: 0;
+    padding: rem-calc(10 14 11);
+    border: 1px solid $input-field-color;
+    border-right: none;
+    font-weight: font-weight(bold);
+    transition: border-color 250ms;
+
+    .input__field:hover + & {
+        border-color: darken($input-field-color, $input-field-darken);
+    }
+    .input__field:focus + & {
+        border-color: $input-field-color-focus;
+    }
+}
+
+.input__error {
+    order: 3;
+    display: inline-block;
+    padding: $bit $bit $bit ($bit * 2);
+    color: color(medium-gray);
+    font-size: font-size(small);
+    line-height: 1;
+
+    .input__field_status_invalid ~ & {
+        opacity: 0;
+    }
+}
+.input__error {
+    position: absolute;
+    bottom: 0;
+    color: color(secondary);
+    opacity: 0;
+
+    .input__field_status_invalid ~ & {
+        opacity: 1;
+    }
+}

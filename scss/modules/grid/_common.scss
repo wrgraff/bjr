@@ -1,0 +1,81 @@
+$columns-number: 12;
+$columns-gutter: (
+    small: rem-calc(32),
+    medium: rem-calc(40),
+    large: rem-calc(54),
+);
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    @each $name, $size in $columns-gutter {
+        @include breakpoint($name) {
+            max-width: $global-width + $size;
+        }
+    }
+    margin: 0 auto;
+}
+.row,
+.section {
+    .row {
+        @each $name, $size in $columns-gutter {
+            @include breakpoint($name) {
+                margin: 0 ($size / -2);
+            }
+        }
+    }
+}
+.row_align_center {
+    align-items: center;
+}
+.row_align_end {
+    align-items: flex-end;
+}
+.row_justify_center {
+    justify-content: center;
+}
+.row_justify_between {
+    justify-content: space-between;
+}
+.row_justify_end {
+    justify-content: flex-end;
+}
+
+.columns {
+    flex: 0px 1 1;
+
+    @each $name, $size in $columns-gutter {
+        @include breakpoint($name) {
+            padding: 0 ($size / 2);
+        }
+    }
+}
+
+@each $name, $size in $breakpoints {
+    @include breakpoint($name) {
+        .#{$name}- {
+            @for $i from 1 through $columns-number {
+                &#{$i} {
+                    flex: (100% / $columns-number * $i) 0 0;
+                    max-width: (100% / $columns-number * $i);
+                }
+            }
+
+            &shrink {
+                flex: 0px 0 0;
+            }
+        }
+    }
+}
+
+@each $name, $size in $breakpoints {
+    @include breakpoint($name only) {
+        .order-#{$name}- {
+            @for $i from 1 through 6 {
+                &#{$i} {
+                    order: $i;
+                }
+            }
+        }
+    }
+}

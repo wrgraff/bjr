@@ -1,0 +1,57 @@
+.select {
+    position: relative;
+    display: block;
+    margin-bottom: $bit * 3.5;
+
+    .form__group & {
+        margin-bottom: 0;
+    }
+}
+.select__text {
+    display: block;
+    margin-bottom: rem-calc(16);
+    color: color(black);
+    line-height: 1;
+    font-weight: font-weight(bold);
+    transition: color 250ms;
+
+    .input__field:focus + & {
+        color: $input-field-color-focus;
+    }
+    .input__field_status_valid + &,
+    .input__field_status_valid:focus + & {
+        color: $input-field-color-success;
+    }
+    .input__field_status_invalid + &,
+    .input__field_status_invalid:focus + & {
+        color: $input-field-color-error;
+    }
+}
+.select__field {
+    width: 100%;
+    padding: rem-calc(11 14 12);
+    border: 1px solid $input-field-color;
+    font-family: inherit;
+    font-size: font-size(medium);
+    font-weight: font-weight(bold);
+    line-height: 1;
+    transition: border-color 250ms;
+    appearance: none;
+    background-image: url(../img/ico/chevron_down.svg);
+    background-position: 100% 50%;
+    background-position: calc(100% - 19px) 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+    }
+
+    &:hover {
+        border-color: darken($input-field-color, $input-field-darken);
+    }
+    &:focus {
+        border-color: $input-field-color-focus;
+    }
+}

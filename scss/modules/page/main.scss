@@ -1,0 +1,15 @@
+.page-main {
+    display: flex;
+    max-width: $global-width;
+    margin: 0 auto;
+    padding: rem-calc(30 26 74);
+}
+
+.page-main__aside {
+    width: rem-calc(118);
+    margin-right: rem-calc(55);
+}
+
+.page-main__content {
+    flex-grow: 2;
+}
