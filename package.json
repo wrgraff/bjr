@@ -1,8 +1,8 @@
 {
-  "name": "starter",
+  "name": "BJR",
   "version": "1.0.0",
-  "description": "Starter template",
-  "main": "index.js",
+  "description": "BJR test task",
+  "main": "dist/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
