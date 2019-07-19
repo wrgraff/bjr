@@ -4,7 +4,11 @@
     margin-bottom: $bit * 3.5;
 
     .form__group & {
-        margin-bottom: 0;
+        margin-bottom: $bit * 2;
+        
+        @include breakpoint(large) {
+            margin-bottom: 0;
+        }
     }
 }
 .input__text {
@@ -30,6 +34,7 @@
 }
 .input__field {
     order: 2;
+    min-width: rem-calc(100);
     width: 100%;
     padding: rem-calc(12 16 13);
     border: 1px solid $input-field-color;

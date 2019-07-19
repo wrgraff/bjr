@@ -9,6 +9,9 @@
 .form__group {
     display: flex;
     flex-wrap: wrap;
+    @include breakpoint(medium down) {
+        flex-direction: column;
+    }
     margin: rem-calc(0 -12 16);
 
     > * {
