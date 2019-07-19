@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Artur Trifonov",
+  "author": "Artur Trifonov <hello@frontend-design.ru> (https://frontend-design.ru/)",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.0",
