@@ -5,7 +5,7 @@
 
     .form__group & {
         margin-bottom: $bit * 2;
-        
+
         @include breakpoint(large) {
             margin-bottom: 0;
         }
@@ -13,9 +13,9 @@
 }
 .input__text {
     display: block;
-    margin-bottom: rem-calc(16);
+    margin-bottom: rem-calc(10);
     color: color(black);
-    line-height: 1;
+    line-height: 1.5;
     font-weight: font-weight(bold);
     transition: color 250ms;
     cursor: text;
@@ -34,14 +34,14 @@
 }
 .input__field {
     order: 2;
-    min-width: rem-calc(100);
+    min-width: rem-calc(79);
     width: 100%;
     padding: rem-calc(12 16 13);
     border: 1px solid $input-field-color;
     font-size: font-size(medium);
     font-weight: font-weight(bold);
     line-height: 1;
-    transition: border-color 250ms;
+    transition: border-color 250ms, box-shadow 250ms;
 
     &::placeholder {
         color: color(dark-gray);
@@ -55,7 +55,9 @@
         border-color: darken($input-field-color, $input-field-darken);
     }
     &:focus {
+        outline: none;
         border-color: $input-field-color-focus;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
     }
 }
 .input__field_status_valid {

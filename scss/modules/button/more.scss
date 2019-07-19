@@ -1,0 +1,35 @@
+.button-more {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font-size: rem-calc(16);
+    font-weight: font-weight(bold);
+    cursor: pointer;
+
+    &::before {
+        content: '+';
+        display: block;
+        width: rem-calc(28);
+        height: rem-calc(28);
+        line-height: rem-calc(26);
+        margin-right: rem-calc(26);
+        background-color: #d4d4d4;
+        transition: color 250ms, background-color 250ms, box-shadow 250ms;
+    }
+
+    &:hover {
+        &::before {
+            color: color(white);
+            background-color: color(dark-gray);
+        }
+    }
+    &:focus {
+        outline: none;
+
+        &::before {
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        }
+    }
+}

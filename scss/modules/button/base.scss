@@ -1,0 +1,21 @@
+.button {
+    padding: rem-calc(15 82);
+    color: color(white);
+    background-color: color(primary);
+    border: 2px solid color(primary);
+    border-radius: 100px;
+    font-size: rem-calc(18);
+    text-transform: uppercase;
+    font-weight: font-weight(bold);
+    cursor: pointer;
+    transition: color 250ms, background-color 250ms;
+
+    &:hover {
+        color: color(primary);
+        background-color: color(white);
+    }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+}

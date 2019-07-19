@@ -41,7 +41,7 @@
                         </header>
 
                         <div class="section__body">
-                            <div class="row">
+                            <div class="row row_align_end">
                                 <!-- Name input -->
                                 <div class="small-12 large-6 columns">
                                     <label class="input">
@@ -98,11 +98,11 @@
                                         <span class="radios__text">Есть ли у Вас несовершенолетние дети</span>
 
                                         <label class="radio">
-                                            <input type="radio" name="radio" class="radio__input" checked />
+                                            <input type="radio" name="kids" class="radio__input" checked />
                                             <span class="radio__text">Да</span>
                                         </label>
                                         <label class="radio">
-                                            <input type="radio" name="radio" class="radio__input" />
+                                            <input type="radio" name="kids" class="radio__input" />
                                             <span class="radio__text">Нет</span>
                                         </label>
                                     </div>
@@ -157,6 +157,268 @@
                         <header class="section__header">
                             <h2>Адрес фактического места проживания</h2>
                         </header>
+
+                        <div class="section__body">
+                            <div class="row row_align_end">
+                                <!-- Match input -->
+                                <div class="small-12 columns">
+                                    <label class="form__switch-section checkbox">
+                                        <input type="checkbox" name="match" class="checkbox__input" data-tab-check="match" checked />
+                                        <span class="checkbox__text">Совпадает с местом регистрации</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form__section form__section_active" data-tab="match">
+                                <div class="row row_align_end">
+                                    <!-- Postcode input -->
+                                    <div class="small-4 medium-3 large-2 columns">
+                                        <label class="input">
+                                            <span class="input__text">Индекс</span>
+                                            <input type="text" class="input__field" placeholder="191023" />
+                                        </label>
+                                    </div>
+
+                                    <!-- Postcode input -->
+                                    <div class="small-8 medium-3 large-4 columns">
+                                        <label class="input">
+                                            <span class="input__text">Область</span>
+                                            <input type="text" class="input__field" placeholder="Ленинградская" />
+                                        </label>
+                                    </div>
+
+                                    <!-- City input -->
+                                    <div class="small-12 medium-6 columns">
+                                        <label class="input">
+                                            <span class="input__text">Город</span>
+                                            <input type="text" class="input__field" placeholder="Санкт-Петербург" />
+                                        </label>
+                                    </div>
+
+                                    <!-- City input -->
+                                    <div class="small-12 medium-6 large-3 columns">
+                                        <label class="input">
+                                            <span class="input__text">Район</span>
+                                            <input type="text" class="input__field" placeholder="Адмиралтейский" />
+                                        </label>
+                                    </div>
+
+                                    <!-- Street input -->
+                                    <div class="small-12 medium-6 large-3 columns">
+                                        <label class="input">
+                                            <span class="input__text">Улица</span>
+                                            <input type="text" class="input__field" placeholder="Ефимова" />
+                                        </label>
+                                    </div>
+
+                                    <!-- Building input -->
+                                    <div class="small-4 large-shrink columns">
+                                        <label class="input">
+                                            <span class="input__text">Дом</span>
+                                            <input type="text" class="input__field" placeholder="3" />
+                                        </label>
+                                    </div>
+
+                                    <!-- Housing input -->
+                                    <div class="small-4 large-shrink columns">
+                                        <label class="input">
+                                            <span class="input__text">Корпус</span>
+                                            <input type="text" class="input__field" placeholder="1" />
+                                        </label>
+                                    </div>
+
+                                    <!-- Apartment input -->
+                                    <div class="small-4 large-shrink columns">
+                                        <label class="input">
+                                            <span class="input__text">Квартира</span>
+                                            <input type="text" class="input__field" placeholder="406" />
+                                        </label>
+                                    </div>
+
+                                    <!-- Living input -->
+                                    <div class="small-12 large-6 columns">
+                                        <label class="input">
+                                            <span class="input__text">Длительность проживания в регионе по&nbsp;фактическому&nbsp;адресу</span>
+                                            <input type="text" class="input__field" placeholder="5 лет" />
+                                        </label>
+                                    </div>
+
+                                    <!-- Right input -->
+                                    <div class="small-12 large-6 columns">
+                                        <label class="select">
+                                            <span class="select__text">Право проживания</span>
+                                            <select class="select__field">
+                                                <option value="">Социальный наем</option>
+                                                <option value="">В разводе</option>
+                                                <option value="">В браке</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Work fields -->
+                    <section class="section">
+                        <header class="section__header">
+                            <h2>Укажите тип вашей основной трудовой занятости</h2>
+                        </header>
+
+                        <div class="section__body">
+                            <div class="row row_align_end">
+                                <!-- Work type input -->
+                                <div class="small-12 columns">
+                                    <div class="radios">
+                                        <label class="radio">
+                                            <input type="radio" name="work_type" class="radio__input" checked />
+                                            <span class="radio__text">По найму</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="work_type" class="radio__input" />
+                                            <span class="radio__text">ИП</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="work_type" class="radio__input" />
+                                            <span class="radio__text">Собственник бизнеса</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- No docs input -->
+                                <div class="small-12 medium-6 columns columns_align_start">
+                                    <label class="checkbox checkbox_secondary">
+                                        <input type="checkbox" name="checkbox" class="checkbox__input" />
+                                        <span class="checkbox__text">Не могу документально подтвердить занятость</span>
+                                    </label>
+                                </div>
+
+                                <!-- Phone input -->
+                                <div class="small-12 large-6 columns">
+                                    <label class="input">
+                                        <span class="input__text">Телефон работодателя</span>
+                                        <input type="tel" class="input__field" />
+                                    </label>
+                                </div>
+
+                                <!-- Team input -->
+                                <div class="small-12 large-6 columns">
+                                    <label class="input">
+                                        <span class="input__text">Укажите кол-во сотрудников в компании</span>
+                                        <input type="number" class="input__field" placeholder="10" />
+                                    </label>
+                                </div>
+
+                                <!-- Name input -->
+                                <div class="small-12 large-6 columns">
+                                    <label class="input">
+                                        <span class="input__text">ФИО руководителя</span>
+                                        <input type="text" class="input__field" placeholder="Фамилия Имя Отчество" />
+                                    </label>
+                                </div>
+
+                                <!-- More button -->
+                                <div class="small-12 large-6 columns columns_align_center">
+                                    <button type="button" class="button-more">Дополнительное место работы</button>
+                                </div>
+
+                                <!-- Site input -->
+                                <div class="small-12 large-6 columns">
+                                    <label class="input">
+                                        <span class="input__text">Сайт компании</span>
+                                        <input type="url" class="input__field" placeholder="https://" />
+                                    </label>
+                                </div>
+
+                                <!-- Actives inputs -->
+                                <div class="small-12 large-8 columns">
+                                    <p class="form__title">
+                                        Укажите имеющиеся активы
+                                    </p>
+
+                                    <div class="row">
+                                        <div class="small-6 columns">
+                                            <label class="checkbox checkbox_justify_left">
+                                                <input type="checkbox" name="checkbox" class="checkbox__input" />
+                                                <span class="checkbox__text">Автомобиль</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="small-6 columns">
+                                            <label class="checkbox checkbox_justify_left">
+                                                <input type="checkbox" name="checkbox" class="checkbox__input" />
+                                                <span class="checkbox__text">Земельный участок</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="small-6 columns">
+                                            <label class="checkbox checkbox_justify_left">
+                                                <input type="checkbox" name="checkbox" class="checkbox__input" />
+                                                <span class="checkbox__text">Квартира</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="small-6 columns">
+                                            <label class="checkbox checkbox_justify_left">
+                                                <input type="checkbox" name="checkbox" class="checkbox__input" />
+                                                <span class="checkbox__text">Вклады</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="small-6 columns">
+                                            <label class="checkbox checkbox_justify_left">
+                                                <input type="checkbox" name="checkbox" class="checkbox__input" />
+                                                <span class="checkbox__text">Дом</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="small-6 columns">
+                                            <label class="checkbox checkbox_justify_left">
+                                                <input type="checkbox" name="checkbox" class="checkbox__input" />
+                                                <span class="checkbox__text">Коммерческая недвижимость</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Credits input -->
+                                <div class="small-12 columns">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox" class="checkbox__input" />
+                                        <span class="checkbox__text">У меня есть действующие кредиты</span>
+                                    </label>
+                                </div>
+
+                                <!-- Bankrupt input -->
+                                <div class="small-12 large-6 columns">
+                                    <div class="radios">
+                                        <span class="radios__text">Применялась ли к Вам процедура банкротства?</span>
+
+                                        <label class="radio">
+                                            <input type="radio" name="bankrupt" class="radio__input" checked />
+                                            <span class="radio__text">Нет</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="bankrupt" class="radio__input" />
+                                            <span class="radio__text">Да</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Revenue input -->
+                                <div class="small-12 large-6 columns">
+                                    <label class="input">
+                                        <span class="input__text">Опишите ваши дополнительные доходы при их наличии</span>
+                                        <input type="text" class="input__field" placeholder="Не имеется" />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section section_footer">
+                        <button type="submit" class="button">Отправить</button>
+                    </section>
                 </form>
             </div>
         </main>

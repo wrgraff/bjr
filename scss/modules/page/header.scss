@@ -1,6 +1,11 @@
 .page-header {
-    height: rem-calc(158);
-    background-image: url(../img/layout/page-header.png);
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
+    display: none;
+
+    @include breakpoint(large) {
+        display: block;
+        height: rem-calc(158);
+        background-image: url(../img/layout/page-header.png);
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+    }
 }

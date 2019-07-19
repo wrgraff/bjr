@@ -1,14 +1,15 @@
-$checkbox-size: rem-calc(20);
+$checkbox-size: rem-calc(17);
 
 .checkbox {
-    display: block;
-    margin-bottom: $bit * 2;
-    color: color(dark-gray);
+    display: inline-block;
+    margin-bottom: $bit * 3.5;
+    color: color(black);
+    font-weight: font-weight(bold);
     transition: color 250ms;
-
-    &:hover {
-        color: color(black);
-    }
+    cursor: pointer;
+}
+.checkbox_secondary {
+    color: color(dark-gray);
 }
 .checkbox__input {
     width: 0;
@@ -21,34 +22,48 @@ $checkbox-size: rem-calc(20);
 .checkbox__text {
     position: relative;
     display: flex;
-    padding-left: $checkbox-size + ($bit * 1.5);
+    padding-right: $checkbox-size + ($bit * 3);
+
+    .checkbox_justify_left & {
+        padding-left: $checkbox-size + ($bit * 3);
+        padding-right: 0;
+    }
 
     &::before {
         content: '';
         position: absolute;
-        left: 0;
-        top: (rem-calc(24) - $checkbox-size) / 2;
+        right: 0;
+        top: (rem-calc(20) - $checkbox-size) / 2;
         display: block;
         flex-shrink: 0;
         width: $checkbox-size;
         height: $checkbox-size;
-        margin-right: $bit;
-        border: 2px solid color(dark-gray);
-        border-radius: $radius;
-        transition: background-color 250ms, border-color 250ms, box-shadow 250ms;
+        border: 2px solid #b8b8b8;
+        transition: border-color 250ms;
+
+        .checkbox_justify_left & {
+            right: auto;
+            left: 0;
+        }
     }
 
     &::after {
         content: '';
         position: absolute;
-        left: $checkbox-size / 2;
-        top: (($checkbox-size / 2) + (rem-calc(24) - $checkbox-size) / 2) - (($checkbox-size / 2.3) / 4);
-        width: $checkbox-size / 3.3 * 2;
-        height: $checkbox-size / 3;
+        right: rem-calc(-11);
+        top: rem-calc(7);
+        width: rem-calc(16);
+        height: rem-calc(8);
         border-style: solid;
-        border-color: color(white);
+        border-color: transparent;
         border-width: 0 0 2px 2px;
         transform: translate(-50%, -50%) rotate(-45deg);
+        transition: border-color 250ms;
+
+        .checkbox_justify_left & {
+            right: auto;
+            left: rem-calc(12);
+        }
     }
 
     .checkbox:hover & {
@@ -64,26 +79,13 @@ $checkbox-size: rem-calc(20);
     }
     .checkbox__input:checked + & {
         &::before {
-            background-color: color(primary);
             border-color: color(primary);
         }
         &::after {
-            border-color: color(white);
-        }
-    }
-    .checkbox__input:checked:hover + & {
-        &::before {
-            background-color: smart-scale(color(primary));
-            border-color: smart-scale(color(primary));
-        }
-    }
-    .checkbox__input:checked:focus + & {
-        &::before {
-            box-shadow: 0 0 0 ($bit * 1) rgba(color(primary), .1);
+            border-color: color(primary);
         }
     }
 }
-.checkbox__helper,
 .checkbox__error {
     order: 3;
     display: inline-block;

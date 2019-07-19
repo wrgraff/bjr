@@ -16,7 +16,8 @@ $columns-gutter: (
     margin: 0 auto;
 }
 .row,
-.section {
+.section,
+.form__section {
     .row {
         @each $name, $size in $columns-gutter {
             @include breakpoint($name) {
@@ -49,6 +50,12 @@ $columns-gutter: (
             padding: 0 ($size / 2);
         }
     }
+}
+.columns_align_start {
+    align-self: flex-start;
+}
+.columns_align_center {
+    align-self: center;
 }
 
 @each $name, $size in $breakpoints {

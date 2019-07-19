@@ -3,6 +3,7 @@ $radio-size: rem-calc(34);
 .radios {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: $bit * 1.5;
 }
 .radios__text {
     width: 100%;

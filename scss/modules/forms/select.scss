@@ -29,6 +29,7 @@
 }
 .select__field {
     width: 100%;
+    height: rem-calc(45);
     padding: rem-calc(11 14 12);
     border: 1px solid $input-field-color;
     font-family: inherit;
@@ -37,11 +38,14 @@
     line-height: 1;
     transition: border-color 250ms;
     appearance: none;
+    background-color: #fff;
     background-image: url(../img/ico/chevron_down.svg);
     background-position: 100% 50%;
     background-position: calc(100% - 19px) 50%;
     background-repeat: no-repeat;
+    border-radius: 0;
     cursor: pointer;
+    transition: border-color 250ms, box-shadow 250ms;
 
     &:-moz-focusring {
         color: transparent;
@@ -52,6 +56,8 @@
         border-color: darken($input-field-color, $input-field-darken);
     }
     &:focus {
+        outline: none;
         border-color: $input-field-color-focus;
+        box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
     }
 }

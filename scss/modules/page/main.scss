@@ -6,8 +6,13 @@
 }
 
 .page-main__aside {
-    width: rem-calc(118);
-    margin-right: rem-calc(55);
+    display: none;
+
+    @include breakpoint(large) {
+        display: block;
+        width: rem-calc(118);
+        margin-right: rem-calc(55);
+    }
 }
 
 .page-main__content {
